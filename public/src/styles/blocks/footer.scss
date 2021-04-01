@@ -1,0 +1,53 @@
+.block-collback-user {
+    background: #12A960;
+    color: #FFFFFF;
+
+    &__questions {
+        font-size: 48px;
+        line-height: 125%;
+        letter-spacing: -0.0165em;
+    }
+
+    &__leave-request{
+        max-width: 400px;
+        font-size: 20px;
+        line-height: 125%;
+    }
+
+    &__politica {
+        max-width: 440px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    a {
+        color: #FFFFFF;
+    }
+
+    @include _767 {
+        background-color: #1B201E;
+        padding-top: 48px;
+        padding-bottom: 56px;
+        padding-left: 16px;
+
+
+        .contacts-user {
+            display: flex;
+            flex-direction: column;
+
+            .input {
+                margin: 0 0 16px 0;
+            }
+
+            .button {
+                max-width: 142px;
+                margin: 8px 0 0 0;
+            }
+
+            &__politica {
+                max-width: 312px;
+            }
+        }
+    }
+}
+

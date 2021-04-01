@@ -1,0 +1,31 @@
+extends layout
+block head
+    link(rel="stylesheet", href="/assets/styleAdmin.css")
+block content
+    .card.text-center
+        .card-header
+            ul.nav.nav-pills.card-header-pills
+                li.nav-item
+                    a.nav-link.news-CRUD-button.active(href='/adminPage') Новости
+                li.nav-item
+                    a.nav-link.shares-CRUD-button(href='/sharesCRUD') Акции
+                //- li.nav-item
+                    a.nav-link.shares(href='#') Аккаунт
+        .card-body.mx-auto.w-100
+            form.card-body-CRUD
+                .mb-3
+                    label.form-label(for='dateNews') Дата новости
+                    input#dateNews.form-control(type='date' name='date')
+                .mb-3
+                    label.form-label(for='titleNews') Текст новости
+                    textarea#titleNews.form-control(rows='3' name="text")
+                a(href="/adminPage").btn.btn-primary.card-body-news-CRUD__button-back.mr-3.float-left(type='submit') ← назад 
+                button.btn.btn-primary.float-left(type='submit' name="formBtn" data-type='add' data-url="/NewsCRUD/createNews") Отправить
+                        
+
+       
+
+block footer
+    script(src="/assets/vendor.js")
+    script(src="/assets/admin.js")
+    

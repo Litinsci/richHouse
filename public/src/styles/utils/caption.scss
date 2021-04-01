@@ -1,0 +1,28 @@
+.h {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #1b201e;
+    text-decoration: none;
+    display: block;
+
+
+    &_white {
+        color: #fff;
+    }
+}
+
+.h1 {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 77px;
+    letter-spacing: -0.0165em;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+
+    @include _767 {
+        padding-bottom: 10px;
+    }
+}

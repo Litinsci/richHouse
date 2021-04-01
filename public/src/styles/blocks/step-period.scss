@@ -1,0 +1,19 @@
+.step-period {
+    max-width: 555px;
+
+
+    &__header {
+        font-weight: 450;
+        font-size: 24px;
+        color: #333333;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,62 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+
+block content
+    include header-nav.pug
+    section.news-and-shares.tabs.wrap.pt-12
+        h2.news-and-shares__header Новости и акции
+        ul.news-and-shares__list.mb-10
+            li.news-and-shares__list-elem.tabs__btn(data-tab-id="1").news-and-shares__list-elem_active Все
+            li.news-and-shares__list-elem.tabs__btn(data-tab-id="2") Новости
+            li.news-and-shares__list-elem.tabs__btn(data-tab-id="3") Акции
+
+        .news-and-shares__row-block.tabs__content(data-tab-id="1").tabs__content_active
+            .stocks__slide.slider__slide.swiper-slide.mr-3
+              a(href="#").stocks__link
+                p.stocks__name  Дизайн-проект интерьера БЕСПЛАТНО
+                img(src='./images/January 11th 2021, 2:56:18 pm-image.png', alt="картинка").stocks__img
+                p.stocks__date до 4 марта 2020
+            .news-and-shares__column-news
+                span.list-news__column-date.mb-2 5 марта 2020
+                p.news-and-shares__column-news-text Строительство пристройки и работы по установке септика и водоснабжения в коттеджном поселке
+
+        .news-and-shares__row-block.tabs__content(data-tab-id="2")
+            .stocks__slide.slider__slide.swiper-slide.mr-3
+              a(href="#").stocks__link
+                p.stocks__name  Дизайн-проект интерьера БЕСПЛАТНО 
+                img(src='./images/January 11th 2021, 2:56:18 pm-image.png', alt="картинка").stocks__img
+                p.stocks__date до 4 марта 2020
+            .news-and-shares__column-news
+                span.list-news__column-date.mb-2 5 марта 2022
+                p.news-and-shares__column-news-text Строительство пристройки и работы по установке септика и водоснабжения в коттеджном поселке
+
+        .news-and-shares__row-block.tabs__content(data-tab-id="3")
+            .stocks__slide.slider__slide.swiper-slide.mr-3
+              a(href="#").stocks__link
+                p.stocks__name  Дизайн-проект интерьера БЕСПЛАТНО 
+                img(src='./images/January 11th 2021, 2:56:18 pm-image.png', alt="картинка").stocks__img
+                p.stocks__date до 4 марта 2020
+            .news-and-shares__column-news
+                span.list-news__column-date.mb-2 5 марта 2021
+                p.news-and-shares__column-news-text Строительство пристройки и работы по установке септика и водоснабжения в коттеджном поселке
+
+    section.list-news.wrap
+        a(href="#").list-news__row
+            span.list-news__column-date 10 апреля 2020
+            p.list-news__column-text Изменение в графике работы офиса продаж в новогодние праздники
+        a(href="#").list-news__row
+            span.list-news__column-date 5 марта 2020
+            p.list-news__column-text Строительство пристройки и работы по установке септика и водоснабжения в коттеджном поселке
+        a(href="#").list-news__row
+            span.list-news__column-date 10 апреля 2020
+            p.list-news__column-text Изменение в графике работы офиса продаж в новогодние праздники
+        a(href="#").list-news__row
+            span.list-news__column-date 5 марта 2020
+            p.list-news__column-text Строительство пристройки и работы по установке септика и водоснабжения в коттеджном поселке
+        a(href="#").list-news__row
+            span.list-news__column-date 10 апреля 2020
+            p.list-news__column-text Изменение в графике работы офиса продаж в новогодние праздники
+
+
+    include footer-block.pug

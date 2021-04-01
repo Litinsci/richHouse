@@ -1,0 +1,27 @@
+.list-news {
+    padding: 0 0 124px 0;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        max-width: 880px;
+        padding: 0 0 97px 0;
+        @include _767{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column-date {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #1B201E;
+    }
+
+    &__column-text {
+        max-width: 632px;
+        font-size: 28px;
+        line-height: 125%;
+        color: #1B201E;
+    }
+}

@@ -1,0 +1,221 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+  link(rel="stylesheet", href="./assets/vendor.css")
+
+block content
+
+  include header-nav.pug
+
+  section.hero.hero-index.mb-11
+    .hero__content
+      h1.hero__content-header.wrap.mb-10 Строим дома под ключ #[br]на Юге России
+      form(action="").project-selection.wrap
+        .project-selection__block
+          label(for="").label.project-selection__label Цена до, ₽
+          input(type="text").project-selection__input.project-selection__input-r-slider__prise.maxw-190
+          #r-slider__prise
+        .project-selection__block
+          label(for="").label.project-selection__label Площадь от, м²
+          input(type="text").project-selection__input.project-selection__input-r-slider__area.maxw-190
+          #r-slider__area
+        .project-selection__block.project-selection__block_select
+          label(for="").label.project-selection__label Технология строительства
+          select.project-selection__select
+            option Все
+            option Каркасные дома
+            option Дома из блока
+            option Дома из кирпича
+            option Дома из ЛСТК
+            option Коммерческие здания
+        .project-selection__block
+          .wrap
+            button.button.button_primary.centering Подобрать проект
+        
+
+  section
+    h2.wrap.mb-6  Что мы строим
+    .building-categories
+      .building-categories__blocks.wrap
+        a(href="#").building-category.building-categories__block 
+          span.building-category__title.mb-1 Каркасные дома
+          span.building-category__count 14 проектов
+          img(src="./images/house1.png", alt="").building-category__image
+            
+        a(href="#").building-category.building-categories__block 
+          span.building-category__title.mb-1 Дома из блока
+          span.building-category__count 8 проектов
+          img(src="./images/house2.png", alt="").building-category__image
+
+        a(href="#").building-category.building-categories__block 
+          span.building-category__title.mb-1 Дома из кирпича
+          span.building-category__count 20 проектов
+          img(src="./images/house3.png", alt="").building-category__image
+          
+        a(href="#").building-category.building-categories__block 
+          span.building-category__title.mb-1 Дома из ЛСТК
+          span.building-category__count 19 проектов
+          img(src="./images/house4.png", alt="").building-category__image
+
+        a(href="#").building-category.building-categories__block.building-categories__block_fullwidth
+          span.building-category__title.mb-1 Коммерческие здания
+          span.building-category__count 4 проектов
+          img(src="./images/house5.png", alt="").building-category__image
+
+      .slider.slider_controlled.building-categories__slider
+        .swiper-container__building
+          .swiper-wrap.swiper-wrapper
+            .swiper-slide.swiper-slide-active.mr-3
+              a(href="#").building-category 
+                span.building-category__title.mb-1 Каркасные дома
+                span.building-category__count 14 проектов
+                img(src="./images/house1.png", alt="").building-category__image
+
+            .swiper-slide.mr-3
+              a(href="#").building-category 
+                span.building-category__title.mb-1 Каркасные дома
+                span.building-category__count 14 проектов
+                img(src="./images/house2.png", alt="").building-category__image
+
+            .swiper-slide.mr-3
+              a(href="#").building-category 
+                span.building-category__title.mb-1 Каркасные дома
+                span.building-category__count 14 проектов
+                img(src="./images/house3.png", alt="").building-category__image
+
+            .swiper-slide.mr-3
+              a(href="#").building-category 
+                span.building-category__title.mb-1 Каркасные дома
+                span.building-category__count 14 проектов
+                img(src="./images/house4.png", alt="").building-category__image
+
+            .swiper-slide.mr-3
+              a(href="#").building-category 
+                span.building-category__title.mb-1 Каркасные дома
+                span.building-category__count 14 проектов
+                img(src="./images/house5.png", alt="").building-category__image
+        .swiper-pagination.centering
+        .slider__buttons-row.wrap.mt-6
+          .slider__button.slider__arrow-btn.slider__button_prev.slider__button_disabled.building-categories__prev.slider__button-prev
+            img(src="./images/projects-slider-arrow-left.svg", alt="", srcset="").slider__button
+          .slider__button.slider__arrow-btn.slider__button_next.building-categories__next.slider__button-next
+            img(src="./images/projects-slider-arrow-right.svg", alt="", srcset="").slider__button
+
+
+
+  section.projects-slider.pt-10.pb-10.mb-11
+    .projects-slider__header.wrap.mb-6
+      h2.h2 Популярные проекты
+      .projects-slider__slider-buttons.slider__buttons-row
+        .slider__button.slider__arrow-btn.slider__button_prev.slider__button_disabled.projects-slider__prev.slider__button-prev
+          img(src="./images/projects-slider-arrow-left.svg", alt="", srcset="").slider__button
+        .slider__button.slider__arrow-btn.slider__button_next.projects-slider__next.slider__button-next
+          img(src="./images/projects-slider-arrow-right.svg", alt="", srcset="").slider__button
+    .wrap.mb-5
+      .projects-slider__slider
+        .swiper-container__projects
+          .swiper-wrap.swiper-wrapper
+            .swiper-slide.projects-slider__slide
+              a(href="#").project-block
+                .project-block__image-wrap
+                  img(src="./images/hiTek.png", alt="", srcset="").project-block__image
+                .project-block__wrap
+                  .project-block__main
+                    span.project-block__name.mb-1 Хай-тек
+                    span.project-block__price.mb-1 От 2 854 439 ₽
+                  .project-block__specifications
+                    span.project-block__specifications-item 85 м²
+                    span.project-block__specifications-item 6x10
+            .swiper-slide.projects-slider__slide
+              a(href="#").project-block
+                .project-block__image-wrap
+                  img(src="./images/zelburg.png", alt="", srcset="").project-block__image
+                .project-block__wrap
+                  .project-block__main
+                    span.project-block__name.mb-1 Хай-тек
+                    span.project-block__price.mb-1 От 2 854 439 ₽
+                  .project-block__specifications
+                    span.project-block__specifications-item 85 м²
+                    span.project-block__specifications-item 6x10
+            .swiper-slide.projects-slider__slide
+              a(href="#").project-block
+                .project-block__image-wrap
+                  img(src="./images/hiTek.png", alt="", srcset="").project-block__image
+                .project-block__wrap
+                  .project-block__main
+                    span.project-block__name.mb-1 Хай-тек
+                    span.project-block__price.mb-1 От 2 854 439 ₽
+                  .project-block__specifications
+                    span.project-block__specifications-item 85 м²
+                    span.project-block__specifications-item 6x10
+  
+  include completed-orders.pug
+
+  include advantages-block.pug
+
+  section.about.wrap
+    h2.about__title.mb-5 Немного о нас
+    p.about__text.mb-15 Мы живём в домах, которые построили сами, и наша цель – построить для Вас такие же современные и комфортные дома с применением только энергоэффективных технологий и материалов.
+
+    .about__image-wrap
+      img(src="./images/about_image.jpg", alt="").about__img
+    .about__contacts
+      .about__contact-block
+        span.about__contact-name Андрей Клумбис
+        .about__social-networks
+          .social-list
+            a(href="#").social-list__item
+              img(src="./images/insta-icon.svg", alt="")
+            a(href="#").social-list__item
+              img(src="./images/youtube-icon.svg", alt="")
+      .about__contact-block
+        span.about__contact-name Андрей Чирва
+        .about__social-networks
+          .social-list
+            a(href="#").social-list__item
+              img(src="./images/insta-icon.svg", alt="")
+            a(href="#").social-list__item
+              img(src="./images/youtube-icon.svg", alt="")
+  - var month = ['Января', 'Февралья', 'Марта', 'Апрелья', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Ноября', 'Декабря' ];
+
+  section.stocks.slider.mb-15
+    .stocks__header.wrap.mb-6
+      h2.h2 Акции
+      a.stocks__more.button.button_invisible Все акции
+    .wrap
+      .stocks__slider
+        .swiper-container__stocks
+          .swiper-wrapper.mb-3
+            each val in Shares
+              .stocks__slide.slider__slide.swiper-slide.mr-3
+                a(href="#").stocks__link
+                  p.stocks__name  #{val.title}
+                  img(src=val.img_src, alt="картинка").stocks__img
+                  p.stocks__date до #{val.date.getDate()} #{month[val.date.getMonth()]} #{val.date.getFullYear()}
+          
+          .slider__buttons-row.stocks__buttons
+            .slider__button.slider__arrow-btn.slider__button_prev.slider__button_disabled.projects-slider__prev.slider__button-prev
+              img(src="./images/projects-slider-arrow-left.svg", alt="", srcset="").slider__button
+            .slider__button.slider__arrow-btn.slider__button_next.projects-slider__next.slider__button-next
+              img(src="./images/projects-slider-arrow-right.svg", alt="", srcset="").slider__button
+
+  section.news.wrap.mb-20.slider
+    .news__header.mb-6
+      h2.h2 Новости
+      .slider__buttons-row.stocks__buttons
+        .slider__button.slider__arrow-btn.slider__button_prev.slider__button_disabled.projects-slider__prev.slider__button-prev
+          img(src="./images/projects-slider-arrow-left.svg", alt="", srcset="").slider__button
+        .slider__button.slider__arrow-btn.slider__button_next.projects-slider__next.slider__button-next
+          img(src="./images/projects-slider-arrow-right.svg", alt="", srcset="").slider__button
+    .news__slider
+      .swiper-container__news
+        .swiper-wrap.news__block.swiper-wrapper
+          each val in News
+            .swiper-slide
+              a.news__link
+                span.news__date.mb-2 #{val.date.getDate()} #{month[val.date.getMonth()]} #{val.date.getFullYear()}
+                span.news__title #{val.title}
+
+  include footer-block.pug
+
+

@@ -1,0 +1,30 @@
+version: "3" # версия докер компоус
+services: #какие контейнеры нужны
+  # имя контейнера
+  db:
+    image: mysql:8.0
+    volumes:
+      - "./data/db:/var/lib/mysql" # эта папка монтируется с наружи контейнера
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: swagsoul2 #пароль от бд
+      MYSQL_DATABASE: richHouse # название БД
+      MYSQL_USER: root # имя пользователя
+      MYSQL_PASSWORD: swagsoul2
+    ports: 
+      - "3306:3306"
+  node:
+    depends_on: #зависисость от контейнера
+      - db
+    image: node:10
+    volumes: 
+      - ./:/app
+    working_dir: /app
+    command: npm start
+    ports:
+      - "8000:3000"
+    environment:
+      MYSQL_ROOT_PASSWORD: swagsoul2
+      MYSQL_DATABASE: richHouse
+
+

@@ -1,0 +1,38 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+  link(rel="stylesheet", href="./assets/vendor.css")
+
+block content
+ 
+  include header-nav.pug
+
+  section.hero.hero-index
+    .hero__content
+      h1.hero__content-header.wrap.mb-10 Строим дома под ключ #[br]на Юге России
+      form(action="").project-selection.wrap
+        .project-selection__block
+          label(for="").label.project-selection__label Цена до, ₽
+          input(type="text").project-selection__input.project-selection__input-r-slider__prise.maxw-190
+          #r-slider__prise
+        .project-selection__block
+          label(for="").label.project-selection__label Площадь от, м²
+          input(type="text").project-selection__input.project-selection__input-r-slider__area.maxw-190
+          #r-slider__area
+        .project-selection__block.project-selection__block_select
+          label(for="").label.project-selection__label Технология строительства
+          select.project-selection__select
+            option Все
+            option Каркасные дома
+            option Дома из блока
+            option Дома из кирпича
+            option Дома из ЛСТК
+            option Коммерческие здания
+        .project-selection__block
+          .wrap
+            button.button.button_primary.centering Подобрать проект
+        
+   
+
+
+    //- script(type='text/javascript' charset='utf-8' async='' src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2c13c0753860749858fb8eceb4c633139cfb039e691d2a11ae9d677398dbff66&width=900&height=400&lang=ru_RU&scroll=true')

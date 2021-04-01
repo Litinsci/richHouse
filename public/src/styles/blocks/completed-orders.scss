@@ -1,0 +1,65 @@
+.completed-orders {
+
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include _767{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        padding-bottom: 133px;
+        overflow: hidden;
+    }
+
+    &__info-block {
+        padding: 36px 40px;
+        margin: -80px 0 0 40px;
+        background: #fff;
+        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        // bottom: -40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 99px rgba(0, 0, 0, .08);
+    }
+
+    &__name {
+        font-size: 28px;
+        font-weight: 400;
+        margin-right: 80px;
+        text-decoration: none;
+        color: #000;
+        display: inline-block;
+    }
+
+    &__link {
+        color: #000;
+        font-size: 18px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        transition: color .35s;
+    }
+    &__image{
+        margin: 0 0 0 8px;
+    }
+
+    &__buttons-wrap{
+        z-index: 1;
+        position: absolute;
+        top: calc(18.765vw - 28px);
+
+        &_first{
+            left: calc((100% - 1300px)/2 );
+        }
+        &_next{
+            right: calc((100% - 1300px)/2);
+            margin: 0;
+        }
+    }
+}

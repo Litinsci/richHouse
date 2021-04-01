@@ -1,0 +1,38 @@
+.slider{
+   
+
+    &__buttons-row{
+        display: flex;
+    }
+
+    &__button:first-child{
+        margin-right: 32px;
+    }
+    &__button{
+        &_disabled{
+            opacity: 0.4;
+        }
+    }
+    &__lazy-image{
+        opacity: 0;
+        transition: opacity 175ms;
+        background-repeat: no-repeat;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+
+        &_loaded{
+            opacity: 1;
+        }
+    }
+
+    &__round-btn{
+        width: 56px;
+        height: 56px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+}

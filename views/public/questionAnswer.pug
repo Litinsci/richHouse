@@ -1,0 +1,55 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+  link(rel="stylesheet", href="./assets/vendor.css")
+
+block content
+    include header-nav.pug
+    section.hero.hero-questionAnswer.mb-11.pt-20.mt-8
+        .hero__content
+            h1.hero__content-header.hero__content-header_dark.wrap Часто задаваемые #[br]вопросы
+
+    section.questionAnswer.wrap
+        .questionAnswer__wrap
+            .questionAnswer__question-wrap
+                span.questionAnswer__question-title Меня не устраивает цена, как поступить в этой ситуации?
+                .questionAnswer__question-btn(data-id-acardeon='1')
+                    img(src="./images/Group 467.svg", alt="").questionAnswer__question-btn-img
+            .questionAnswer__question-answer.acardeon(data-id-acardeon='1')
+                p Клиенты RICH HOUSE – современные люди, которым важна пожарная безопасность, экологичность и энергоэффективность, поэтому мы выбираем только лучших производителей быстровозводимых домов.
+        .questionAnswer__wrap
+            .questionAnswer__question-wrap
+                span.questionAnswer__question-title Реальны ли цены, указанные на сайте?
+                .questionAnswer__question-btn(data-id-acardeon='2')
+                    img(src="./images/Group 467.svg", alt="").questionAnswer__question-btn-img
+            .questionAnswer__question-answer.acardeon(data-id-acardeon='2')
+                p Клиенты RICH HOUSE – современные люди, которым важна пожарная безопасность, экологичность и энергоэффективность, поэтому мы выбираем только лучших производителей быстровозводимых домов.
+        .questionAnswer__wrap
+            .questionAnswer__question-wrap
+                span.questionAnswer__question-title Где производят дом?
+                .questionAnswer__question-btn(data-id-acardeon='3')
+                    img(src="./images/Group 467.svg", alt="").questionAnswer__question-btn-img
+            .questionAnswer__question-answer.acardeon(data-id-acardeon='3')
+                p Клиенты RICH HOUSE – современные люди, которым важна пожарная безопасность, экологичность и энергоэффективность, поэтому мы выбираем только лучших производителей быстровозводимых домов.
+        .questionAnswer__wrap
+            .questionAnswer__question-wrap
+                span.questionAnswer__question-title Сколько длится производство?
+                .questionAnswer__question-btn(data-id-acardeon='4')
+                    img(src="./images/Group 467.svg", alt="").questionAnswer__question-btn-img
+            .questionAnswer__question-answer.acardeon(data-id-acardeon='4')
+                p Клиенты RICH HOUSE – современные люди, которым важна пожарная безопасность, экологичность и энергоэффективность, поэтому мы выбираем только лучших производителей быстровозводимых домов.
+        .questionAnswer__wrap
+            .questionAnswer__question-wrap
+                span.questionAnswer__question-title Вы построите дом, если я дам вам готовый проект?
+                .questionAnswer__question-btn(data-id-acardeon='5')
+                    img(src="./images/Group 467.svg", alt="").questionAnswer__question-btn-img
+            .questionAnswer__question-answer.acardeon(data-id-acardeon='5')
+                p Клиенты RICH HOUSE – современные люди, которым важна пожарная безопасность, экологичность и энергоэффективность, поэтому мы выбираем только лучших производителей быстровозводимых домов.
+        .questionAnswer__wrap
+            .questionAnswer__question-wrap
+                span.questionAnswer__question-title А что происходит на участке?
+                .questionAnswer__question-btn(data-id-acardeon='6')
+                    img(src="./images/Group 467.svg", alt="").questionAnswer__question-btn-img
+            .questionAnswer__question-answer.acardeon(data-id-acardeon='6')
+                p Клиенты RICH HOUSE – современные люди, которым важна пожарная безопасность, экологичность и энергоэффективность, поэтому мы выбираем только лучших производителей быстровозводимых домов.
+    include footer-block.pug

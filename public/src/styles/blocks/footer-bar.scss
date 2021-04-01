@@ -1,0 +1,36 @@
+.footer-bar {
+    font-weight: 450;
+    font-size: 36px;
+    line-height: 43px;
+    margin: 0 0 60px 0;
+
+    @include _767{
+        order: 1;
+        // margin: 60px 0 0 0;
+        border-top: 1px solid #cecece;
+        width: 100%;
+        margin: 0;
+    }
+
+    &__list {
+        display: flex;
+
+        @include _1200{
+            font-size: 32px;
+        }
+        @include _1023{
+            font-size: 21px;
+        }
+        @include _767{
+            font-size: 21px;
+            flex-direction: column;
+            padding: 24px 0 0 0;
+        }
+        
+    }
+
+
+    &__list-link{
+        color: #1B201E;
+    }
+}

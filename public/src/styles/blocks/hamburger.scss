@@ -1,0 +1,38 @@
+.hamburger {
+
+    &__line-container {
+        position: relative;
+        width: 24px;
+        height: 12px;
+    }
+
+    &__line {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: #000;
+        position: absolute;
+        left: 0;
+        transition: transform 175ms;
+        :last-child
+        &_left-active {
+            transform: translateY(4px) rotate(45deg);
+        }
+
+        &_right-active {
+            transform: translateY(-5px) rotate(-45deg);
+        }
+
+        &_none {
+            display: none;
+        }
+
+        &_midl {
+            top: -9px;
+        }
+
+        &:last-child {
+            bottom: 0;
+        }
+    }
+}

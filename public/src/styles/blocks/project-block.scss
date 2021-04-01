@@ -1,0 +1,58 @@
+.project-block{
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    display: block;
+    height: 100%;
+    margin: 0 24px 0 0;
+
+    @include _767{
+        width: 100%;
+    }
+
+    &__image-wrap{
+        position: relative;
+    }
+    &__image{
+        
+        @include _767{
+            width: 100%;
+        }
+    }
+    &__wrap{
+        padding: 16px 24px 20px;
+    }
+    &__main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__name{
+        font-size: 24px;
+        font-weight: 400;
+        color: #000;
+    }
+    &__price{
+        font-size: 20px;
+        font-weight: 400;
+        color: #ff6241;
+    }
+    &__specifications{
+        display: flex;
+    }
+    &__specifications-item:first-child{
+        margin-right: 6px;
+    }
+    &__specifications-item{
+        background: #edf4f4;
+        border-radius: 2px;
+        line-height: 1;
+        padding: 4px 8px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}

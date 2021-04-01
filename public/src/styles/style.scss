@@ -1,0 +1,88 @@
+@import 'nouislider/distribute/nouislider.css';
+@import 'swiper/swiper-bundle.css';
+// ***********************
+@import "./mixin-adaptiv.scss";
+@import "./fonts.scss";
+// ************************
+@import "./blocks/map.scss";
+@import "./blocks/contacts-list.scss";
+@import "./blocks/button.scss";
+@import "./blocks/inputs.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/header.scss";
+@import "./blocks/nav-list.scss";
+@import "./blocks/block-collback-company.scss";
+@import "./blocks/footer-bar.scss";
+@import "./blocks/bar-contacts.scss";
+@import "./blocks/blocks-info-mini.scss";
+@import "./blocks/footer-terms-of-use.scss";
+@import "./blocks/contacts-user.scss";
+@import "./blocks/contacts-block.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/hero-content.scss";
+@import "./blocks/project-selection.scss";
+@import "./blocks/building-categories.scss";
+@import "./blocks/building-category.scss";
+@import "./blocks/projects-slider.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/project-block.scss";
+@import "./blocks/completed-orders.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/about.scss";
+@import "./blocks/social-list.scss";
+@import "./blocks/stocks.scss";
+@import "./blocks/news.scss";
+@import "./blocks/development-steps.scss";
+@import "./blocks/step-period.scss";
+@import "./blocks/equipment.scss";
+@import "./blocks/equipment-block.scss";
+@import "./blocks/equipment-block-prise.scss";
+@import "./blocks/promt.scss";
+@import "./blocks/loyout.scss";
+@import "./blocks/what-are-we-building.scss";
+@import "./blocks/construction-progress.scss";
+@import "./blocks/builtHouse-main-text.scss";
+@import "./blocks/list-news.scss";
+@import "./blocks/news-and-shares.scss";
+@import "./blocks/line.scss";
+@import "./blocks/text-news-or-shares.scss";
+@import "./blocks/droped-menu.scss";
+@import "./blocks/hamburger.scss";
+@import "./blocks/submenu.scss";
+@import "./blocks/mobile-nav.scss";
+@import "./blocks/project-hero.scss";
+@import "./blocks/hero-commerical.scss";
+@import "./blocks/hero-project.scss";
+@import "./blocks/hero-questionAnswer.scss";
+@import "./blocks/questionAnswer.scss";
+@import "./blocks/tabs.scss";
+@import "./blocks/hero-index.scss";
+@import "./blocks/noUi-connects.scss";
+// ************************
+@import "./utils/p.scss";
+@import "./utils/m.scss";
+@import "./utils/h.scss";
+@import "./utils/wrap.scss";
+@import "./utils/caption.scss";
+@import "./popper.scss";
+@import "./utils/w.scss";
+@import "./utils/maxw.scss";
+@import "./utils/centering.scss";
+
+// @import "../../../node_modules/swiper/swiper.scss";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    font-family: "Baton Turbo", sans-serif;
+}
+// img {
+//     width: 100%;
+// }

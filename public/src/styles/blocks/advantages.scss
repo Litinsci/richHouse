@@ -1,0 +1,62 @@
+.advantages {
+    background: #edf4f4;
+
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: -55px;
+        position: relative;
+    }
+
+    &__blocks::after,
+    &__blocks::before {
+        content: "";
+        display: block;
+        width: 1px;
+        top: -16px;
+        bottom: 39px;
+        position: absolute;
+        background: url("/images/line_advantages.png");
+    }
+
+    &__blocks::before {
+        left: calc(33% - 14px);
+        @include _767 {
+            display: none;
+        }
+    }
+
+    &__blocks::after {
+        right: calc(33% - 14px);
+        @include _767 {
+            display: none;
+        }
+    }
+
+    &__block {
+        width: calc(35% - 61px);
+        margin-bottom: 55px;
+        @include _767 {
+            width: calc(50% - 24px);
+        }
+        @include _767 {
+            width: 100%;
+        }
+
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 450;
+        line-height: 125%;
+        margin-top: 0;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 130%;
+        margin: 0;
+    }
+}

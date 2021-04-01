@@ -1,0 +1,104 @@
+.project-hero {
+    display: flex;
+    justify-content: space-around;
+    min-height: 586px;
+    @include _1200{
+        flex-wrap: wrap;
+    }
+    &__slider-wrapper {
+        min-width: 0;
+        flex-grow: 1;
+        margin-right: 40px;
+        max-width: 762px;
+        @include _1200{
+            margin-bottom: 24px;
+        }
+    }
+    &__slider-built {
+        min-width: 0;
+        flex-grow: 1;
+        margin-right: 40px;
+        @include _1200{
+            margin-bottom: 24px;
+        }
+    }
+    &__slider-img {
+        max-width: 763px;
+        height: 586px;
+        &_full{
+            max-width: none;
+        }
+        @include _1200{
+            max-width: none;
+            width: 100%;
+        }
+    }
+
+    &__slider-btn {
+        position: absolute;
+        top: 50%;
+        margin-top: -28px;
+        z-index: 1;
+        border: 1px solid #e5e5e5;
+        width: 56px;
+        height: 56px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        &_next {
+            right: 24px;
+        }
+
+        &_prev {
+            left: 24px;
+        }
+    }
+
+    &__info {
+        width: 300px;
+        @include _1200{
+            width: 100%;
+        }
+    }
+
+    &__price-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__price-title {
+        font-size: 20px;
+        line-height: 125%;
+        color: #1B201E;
+        width: 100%;
+    }
+
+    &__price {
+        font-size: 24px;
+        line-height: 125%;
+        color: #FF6241;
+        width: 100%;
+    }
+
+    &__list-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 12px;
+    }
+
+    &__list-title {
+        font-size: 18px;
+        line-height: 22px;
+        color: #1B201E;
+        opacity: 0.7;
+    }
+    &__list-size{
+        font-size: 18px;
+        line-height: 22px;
+        text-align: right;
+        color: #1B201E;
+    }
+}

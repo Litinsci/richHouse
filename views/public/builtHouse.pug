@@ -1,0 +1,37 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+
+block content
+    include header-nav.pug
+    
+    h1.h1.wrap.pb-9.pt-12 Дом 368 м² в Краснодаре
+
+    .completed-orders__slider.wrap
+        .project-hero__slider-built.mr-6.w-100
+          .project-hero__slider.swiper-container
+            .swiper-wrapper
+              .project-hero__slide.slider__slide
+                img(src="./images/completed-orders1.png", alt="").project-hero__slider-img.project-hero__slider-img_full.w-100
+            .project-hero__slider-btn.project-hero__slider-btn_prev.slider__button_disabled
+              img(src="./images/projects-slider-arrow-left.svg")
+            .project-hero__slider-btn.project-hero__slider-btn_next
+              img(src="./images/projects-slider-arrow-right.svg")
+            .project-hero__slider-pagination.centering
+
+    p.builtHouse-main-text.wrap Так как здания из кирпича долговечны, прочны и стойки к разрушающим воздействиям окружающей среды, их строительство является наиболее востребованной услугой. Наша компания в Москве предложит вам самый лучший проект загородного дома из кирпича, а возведенные нами сооружения соответствуют всем требованиям практичности и долговечности эксплуатации. Мы реализуем все этапы постройки жилья — от разработки проекта до выполнения всех необходимых работ.
+        
+
+
+    section.construction-progress.wrap
+        h2.construction-progress__header.mb-6 Ход строительства
+        .construction-progress__wrap
+            .construction-progress__block
+                img(src="./images/construction-progress.png", alt="").construction-progress__img
+                .construction-progress__title Январь 2020
+            .construction-progress__block
+                img(src="./images/construction-progress2.png", alt="").construction-progress__img
+                .construction-progress__title Декабрь 2019
+
+
+    include footer-block.pug

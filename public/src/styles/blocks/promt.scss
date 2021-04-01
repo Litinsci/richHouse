@@ -1,0 +1,59 @@
+.promt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "first third"
+        "second third";
+    row-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    :first-child {
+        grid-area: first;
+    }
+    :nth-child(2) {
+        grid-area: second;
+    }
+    :nth-child(3) {
+        grid-area: third;
+    }
+    &__section {
+        padding: 48px 40px;
+        border-radius: 12px;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+
+        &_with-img {
+            padding-bottom: 60%;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: 100% 100%;
+            background-image: url("/images/promt.png");
+        }
+    }
+
+    &__title {
+        font-weight: 450;
+        font-size: 36px;
+        line-height: 140%;
+        color: #1B201E;
+        padding: 0 0 24px 0;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 125%;
+        color: #383F3C;
+        max-width: 445px;
+        padding: 0 0 40px 0;
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #1B201E;
+    }
+}

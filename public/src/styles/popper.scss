@@ -1,0 +1,58 @@
+.popper{
+  position: relative;
+
+  &__button{
+    display: block;
+    color: #FF6241;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #E5E5E5;
+    border-radius: 50%;
+}
+}
+
+.tooltip {
+  background: rgb(51, 51, 51);
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  visibility: hidden;
+}
+
+.tooltip[data-show] {
+  visibility: visible;
+}
+
+#arrow,
+#arrow::before {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: -1;
+}
+
+#arrow::before {
+  content: '';
+  transform: rotate(45deg);
+  background: #333;
+}
+
+.tooltip[data-popper-placement^='top']>#arrow {
+  bottom: -4px;
+}
+
+.tooltip[data-popper-placement^='bottom'] > #arrow {
+  top: -4px;
+}
+
+.tooltip[data-popper-placement^='left']>#arrow {
+  right: -4px;
+}
+
+.tooltip[data-popper-placement^='right']>#arrow {
+  left: -4px;
+}

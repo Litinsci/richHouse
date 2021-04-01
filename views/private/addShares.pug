@@ -1,0 +1,35 @@
+extends layout
+block head
+    link(rel="stylesheet", href="/assets/styleAdmin.css")
+block content
+    .card.text-center
+        .card-header
+            ul.nav.nav-pills.card-header-pills
+                li.nav-item
+                    a.nav-link.news-CRUD-button(href='/adminPage') Новости
+                li.nav-item
+                    a.nav-link.shares-CRUD-button.active(href='/sharesCRUD') Акции
+                //- li.nav-item
+                    a.nav-link.shares(href='#') Аккаунт
+        .card-body.mx-auto.w-100
+            form.card-body-CRUD
+                .mb-3
+                    label.form-label(for='dateShares') Дата акции
+                    input#dateShares.form-control(type='date' name='date')
+                .mb-3
+                    label.form-label(for='titleShares') Текст акции
+                    textarea#titleShares.form-control(rows='3' name="text")
+                .mb-3
+                   .custom-file
+                        input#fileShares.custom-file-input.upladed(type='file' name="file")
+                        label.custom-file-label(for='fileShares') Изображение для акции
+                a(href="/adminPage").btn.btn-primary.card-body-news-CRUD__button-back.mr-3.float-left(type='submit') ← назад 
+                button.btn.btn-primary.float-left(type='submit' name="formBtn" data-type='add' data-url="/sharesCRUD/addHeandler" data-is-shares='true') Отправить
+                        
+
+       
+
+block footer
+    script(src="/assets/vendor.js")
+    script(src="/assets/admin.js")
+    

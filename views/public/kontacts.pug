@@ -1,0 +1,27 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+  link(rel="stylesheet", href="./assets/vendor.css")
+  script(src='https://api-maps.yandex.ru/2.1/?apikey=7bd962ae-502b-4a3a-bb36-ed9bacbcc679&lang=ru_RU' type='text/javascript')
+block content
+ 
+    include header-nav.pug
+
+    section.map.wrap.mt-11
+        h1.h1 Контакты
+
+        ul.contacts-list
+            li.contacts-list__item
+                span.contacts-list__title Звонок со всех регионов
+                a(href="tel:+7(928) 600-33-20").contacts-list__content 8 (928) 600-33-20
+
+            li.contacts-list__item
+                span.contacts-list__title E-mail
+                a(href="mailto:zakaz@rich-dom.ru").contacts-list__content zakaz@rich-dom.ru
+
+            li.contacts-list__item
+                span.contacts-list__title центральный офис
+                a(href="tel:+7(928) 600-33-20").contacts-list__content г. Ростов-на-Дону, пр. Стачки 257
+
+        #map
+    include footer-block.pug

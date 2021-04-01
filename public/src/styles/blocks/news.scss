@@ -1,0 +1,30 @@
+.news {
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #1b201e;
+    }
+
+    &__date {
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    &__title {
+        font-size: 28px;
+        letter-spacing: -.0065em;
+        font-weight: 400;
+    }
+
+    &__block {
+        max-width: 100%;
+    }
+}

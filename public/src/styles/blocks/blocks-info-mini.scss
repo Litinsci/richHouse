@@ -1,0 +1,13 @@
+.blocks-info-mini {
+    display: flex;
+
+    &__block {
+        background: #F8F8F8;
+        border: 1px solid #CECECE;
+        box-sizing: border-box;
+        border-radius: 4px;
+        text-align: center;
+        padding: 9px 16px 7px;
+        margin: 0 8px 0 0;
+    }
+}

@@ -1,0 +1,131 @@
+header.header
+    .header__main-box
+        .header__main
+            .header__main-content
+                a(href="/").header__logo-link
+                    img(src="./images/main-icon.svg", alt="")
+                .header__menu-box.mobile-nav
+                    ul.header__menu
+                        li.header__menu-item 
+                            a(href="/project").header__menu-link Проекты
+
+                        li.header__menu-item.droped-menu(data-id="1" data-full-screan-id="1")
+                            span.header__menu-link Услуги
+                                img(src="./images/Vector 23.svg", alt="").header__menu-arrow
+                            ul.header__menu.droped-menu__list(data-id="1")
+                                li.header__menu-item 
+                                    a(href="#").header__menu-link Частный дом
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Коммерческое здание
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Экспресс-строительство
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Проектирование
+
+                                li.header__menu-item.droped-menu(data-id="1.1")
+                                    a(href="#").header__menu-link Отдельные этапы строительства
+                                        img(src="./images/Vector 23.svg", alt="").header__menu-arrow
+                                    ul.header__menu.droped-menu__list(data-id="1.1")
+                                        li.header__menu-item 
+                                            a(href="#").header__menu-link Коммуникации
+                                        li.header__menu-item
+                                            a(href="#").header__menu-link Фундамент
+                                        li.header__menu-item
+                                            a(href="#").header__menu-link Стены
+                                        li.header__menu-item
+                                            a(href="#").header__menu-link Перекрытие
+                                        li.header__menu-item
+                                            a(href="#").header__menu-link Крыша
+                                        li.header__menu-item
+                                            a(href="#").header__menu-link Фасад
+                                        li.header__menu-item
+                                            a(href="#").header__menu-link Ограждение 
+                                        li.header__menu-item
+                                            a(href="#").header__menu-link Ландшафт
+    
+                        li.header__menu-item
+                            a(href="#").header__menu-link Построенные дома
+                        li.header__menu-item.droped-menu(data-id="2" data-full-screan-id="2")
+                            span.header__menu-link Полезное
+                                img(src="./images/Vector 23.svg", alt="").header__menu-arrow
+                            ul.header__menu.droped-menu__list(data-id="2")
+                                li.header__menu-item 
+                                    a(href="#").header__menu-link Технологии строительства
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Этапы работ
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Наши горантии
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Новости и акции
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Видео-блог
+                                li.header__menu-item
+                                    a(href="#").header__menu-link Вопрос-ответ
+
+                        li.header__menu-item
+                            a(href="/kontacts").header__menu-link Контакты
+                    .header__menu-mob-fot 
+                        button.button.button_translucent.w-100 Заказать звонок
+                
+                .header__contacts
+                    a(href="tel:89286003320").header__phone 8 (928) 600-33-20
+                    button.button.button_translucent.header__feedback Заказать звонок
+                a(href="#").header__menu-btn.hamburger.mobile-nav
+                    .hamburger__line-container
+                        span.hamburger__line
+                        span.hamburger__line.span.hamburger__line_midl
+                        span.hamburger__line
+    
+    .header__droped-menu-full-scran(data-full-screan-id="2")
+        ul.header__menu.droped-menu__list-full-scran(data-full-screan-id="2").wrap
+            li.header__menu-item.header__menu-item-fullScrean
+                a(href="#").header__menu-link-fullScrean Технологии строительства
+            li.header__menu-item.header__menu-item-fullScrean
+                a(href="#").header__menu-link-fullScrean Этапы работ
+            li.header__menu-item.header__menu-item-fullScrean
+                a(href="#").header__menu-link-fullScrean Наши горантии
+            li.header__menu-item.header__menu-item-fullScrean
+                a(href="#").header__menu-link-fullScrean Новости и акции
+            li.header__menu-item.header__menu-item-fullScrean
+                a(href="#").header__menu-link-fullScrean Видео-блог
+            li.header__menu-item.header__menu-item-fullScrean
+                a(href="#").header__menu-link-fullScrean Вопрос-ответ
+    .header__droped-menu-full-scran(data-full-screan-id="1")
+        .wrap.pt-3
+            .submenu
+                .submenu__services
+                    h4.droped-menu__header  Строительство под ключ
+                    ul.submenu__droped-menu
+                        li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                            a(href="#").header__menu-link-fullScrean Коммуникации
+                        li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                            a(href="#").header__menu-link-fullScrean Фундамент
+                        li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                            a(href="#").header__menu-link-fullScrean Стены
+
+                a(href="#").submenu__mark-link
+                    span.submenu__mark-link-title Не подходят типовые проекты?
+                    span Проектирование
+                        img(src="./images/projects-slider-arrow-right.svg", alt="", srcset="").submenu__mark-arrow-btn
+                
+            h3.pb-1.droped-menu__header отдельные этапы строительства
+            hr
+        ul.header__menu.droped-menu__list-full-scran(data-full-screan-id="1").wrap
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Коммуникации
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Фундамент
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Стены
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Перекрытие
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Крыша
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Фасад
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Ограждение
+            li.header__menu-item.header__menu-item-fullScrean.maxw-249
+                a(href="#").header__menu-link-fullScrean Ландшафт
+
+    .header__coating

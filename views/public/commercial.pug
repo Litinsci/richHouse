@@ -1,0 +1,59 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+
+block content
+    include header-nav.pug
+    
+    section.hero.hero-commerical.mb-10.pt-20.mt-8
+        .hero__content
+            h1.hero__content-header.wrap.mb-4 Строительство коммерческих #[br]зданий под ключ
+            .wrap
+                button.button.button_primary Консультация
+    section.wrap.what-are-we-building.pt-12
+        h3.what-are-we-building__header.mb-7 Какие объекты строим
+        .what-are-we-building__row.mb-3
+            .what-are-we-building__column
+                img(src="./images/building7.png", alt="", srcset="").what-are-we-building__img
+                .what-are-we-building__column-wrap
+                    h3.what-are-we-building__column-title Торговые помещения
+                    p.what-are-we-building__column-text Павильоны, магазины, супермаркеты, рыночные комплексы
+            .what-are-we-building__column
+                img(src="./images/building6.png", alt="", srcset="").what-are-we-building__img
+                .what-are-we-building__column-wrap
+                    h3.what-are-we-building__column-title Офисные здания
+                    p.what-are-we-building__column-text Отделы продаж на объекте, офисные помещения
+
+        .what-are-we-building__row.mb-3
+            .what-are-we-building__column
+                img(src="./images/building3.png", alt="", srcset="").what-are-we-building__img
+                .what-are-we-building__column-wrap
+                    h3.what-are-we-building__column-title Мед.учреждения
+                    p.what-are-we-building__column-text Поликлиники, больницы медицинские центры
+            .what-are-we-building__column
+                img(src="./images/building4.png", alt="", srcset="").what-are-we-building__img
+                .what-are-we-building__column-wrap
+                    h3.what-are-we-building__column-title Общепит
+                    p.what-are-we-building__column-text Рестораны, кафе, столовые
+            .what-are-we-building__column
+                img(src="./images/building5.png", alt="", srcset="").what-are-we-building__img
+                .what-are-we-building__column-wrap
+                    h3.what-are-we-building__column-title Гостиницы
+                    p.what-are-we-building__column-text Хостелы, отели,гостиницы
+        .what-are-we-building__row
+            .what-are-we-building__column
+                img(src="./images/building2.png", alt="", srcset="").what-are-we-building__img
+                .what-are-we-building__column-wrap
+                    h3.what-are-we-building__column-title Образовательные учреждения
+                    p.what-are-we-building__column-text Детские сады, детские центры, школы
+            .what-are-we-building__column
+                img(src="./images/building1.png", alt="", srcset="").what-are-we-building__img
+                .what-are-we-building__column-wrap
+                    h3.what-are-we-building__column-title Для автомобилей
+                    p.what-are-we-building__column-text Гаражи, шиномонтаж, автомайки, СТО, автосервис
+
+
+    include development-steps.pug
+    include advantages-block.pug
+    include completed-orders.pug
+    include footer-block.pug

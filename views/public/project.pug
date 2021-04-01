@@ -1,0 +1,186 @@
+extends layout
+block head
+  link(rel='stylesheet', href='./assets/style.css')
+  link(rel="stylesheet", href="./assets/vendor.css")
+
+block content
+  include header-nav.pug
+
+  section.hero.hero-project.mb-10.pt-20.mt-8
+    .hero__content
+      h1.hero__content-header.wrap Проект дома «Хай-тек»
+
+  section.project-hero.wrap.mb-10
+    .project-hero__slider-wrapper.mr-6
+      .project-hero__slider.swiper-container
+        .swiper-wrapper
+          .project-hero__slide.slider__slide
+            img(src="./images/project-hero__slider-img.png", alt="").project-hero__slider-img
+        .project-hero__slider-btn.project-hero__slider-btn_prev.slider__button_disabled
+          img(src="./images/projects-slider-arrow-left.svg")
+        .project-hero__slider-btn.project-hero__slider-btn_next
+          img(src="./images/projects-slider-arrow-right.svg")
+        .project-hero__slider-pagination.centering
+    .project-hero__info
+      .project-hero__price-block
+        span.project-hero__price-title.pb-1 Стоимость
+        span.project-hero__price.pb-2 от 2 854 439 ₽
+      hr.w-100.mb-2
+      .project-hero__list-wrap
+        span.project-hero__list-title Общая площадь:
+        span.project-hero__list-size 285,39 м²
+      .project-hero__list-wrap
+        span.project-hero__list-title Размер:
+        span.project-hero__list-size 6х10
+      hr.w-100.mb-2
+      .project-hero__list-wrap
+        span.project-hero__list-title Кол-во спален:
+        span.project-hero__list-size 4
+      .project-hero__list-wrap
+        span.project-hero__list-title Кол-во этажей:
+        span.project-hero__list-size 2
+      .project-hero__list-wrap
+        span.project-hero__list-title Кол-во сан.узлов:
+        span.project-hero__list-size 4
+      .project-hero__list-wrap
+        span.project-hero__list-title Кол-во гардеробных:
+        span.project-hero__list-size 2
+      .project-hero__list-wrap
+        span.project-hero__list-title Кол-во тех.помещений:
+        span.project-hero__list-size 2
+      hr.w-100.mb-2
+      .project-hero__list-wrap
+        span.project-hero__list-title Площадь терассы:
+        span.project-hero__list-size 51,24 м²
+      .project-hero__list-wrap
+        span.project-hero__list-title Площадь балконов
+        span.project-hero__list-size.pb-5 26 м² (2)
+      button.button.button_invisible.w-100.mb-2 Получить консультацию
+      button.button.button_primary.w-100 Заказать дом
+  section.layout.wrap
+      h2.layout__header Планировка
+      .layout__wrap
+        .layout__img-wrap
+          img(src="./images/layout1.png", alt="").layout__block
+        .layout__img-wrap
+          img(src="./images/layout2.png", alt="").layout__block
+      button.button.button_invisible.layout__button.w-100 Выбрать комплектацию 
+
+  section.equipment.wrap
+    .equipment__header-wrap.mb-8
+      h2.equipment__heading Все коплектации
+      ul.equipment__bar
+        li.equipment__bar-ellement_active Дом из кирпича
+        li.equipment__bar-ellement Дом из газоблока
+        li.equipment__bar-ellement Дом из керамики
+  - var demo = ['Наружные стены', 'Внутренние стены', 'Потолок мансарды', 'Холодные фронтоны', 'Конструкция крыши', 'Элементы балкона и крыльца', 'Комплект соединительных деталей', 'Опорный брус', 'Высота уровня чистого пола' ];
+     
+    .equipment__boody.wrap
+      .equipment__block.equipment-block
+        .equipment-block__header.equipment-block__header_classical
+          h3.equipment-block__title.mb-3 Базовый
+          .equipment-block-prise.ml-6
+            span.equipment-block-prise__title.mb-1 Стоимость
+            span.equipment-block-prise__cost 2 854 439 ₽
+        .equipment-block__body
+          ul.equipment-block__list
+            each val in demo
+              li.equipment-block__list-ellement
+                  p.equipment-block__list-text #{val}
+                    .popper
+                      span(aria-describedby='tooltip').popper__button  ?
+                      .tooltip.popper__tooltip(role='tooltip')
+                        | 123
+                        #arrow(data-popper-arrow='')
+            
+          button.button.button_primary.equipment-block__button Выбрать комплектацию 
+
+      .equipment__block.equipment-block
+        .equipment-block__header.equipment-block__header_special
+          h3.equipment-block__title.mb-3 Базовый
+          .equipment-block-prise.ml-6
+            span.equipment-block-prise__title.mb-1 Стоимость
+            span.equipment-block-prise__cost 2 854 439 ₽
+        .equipment-block__body
+          ul.equipment-block__list
+            each val in demo
+              li.equipment-block__list-ellement
+                  p.equipment-block__list-text #{val}
+                    .popper
+                      span(aria-describedby='tooltip').popper__button  ?
+                      .tooltip.popper__tooltip(role='tooltip')
+                        | 123
+                        #arrow(data-popper-arrow='')
+
+          button.button.button_primary.equipment-block__button Выбрать комплектацию 
+
+  section.projects-slider.pt-10.pb-10.mb-11
+    .projects-slider__header.wrap.mb-6
+      h2.h2 Популярные проекты
+      .projects-slider__slider-buttons.slider__buttons-row
+        .slider__button.slider__arrow-btn.slider__button_prev.slider__button_disabled.projects-slider__prev.slider__button-prev
+          img(src="./images/projects-slider-arrow-left.svg", alt="", srcset="").slider__button
+        .slider__button.slider__arrow-btn.slider__button_next.projects-slider__next.slider__button-next
+          img(src="./images/projects-slider-arrow-right.svg", alt="", srcset="").slider__button
+    .wrap.mb-5
+      .projects-slider__slider
+        .swiper-container__projects
+          .swiper-wrap.swiper-wrapper
+            .swiper-slide.projects-slider__slide
+              a(href="#").project-block
+                .project-block__image-wrap
+                  img(src="./images/hiTek.png", alt="", srcset="").project-block__image
+                .project-block__wrap
+                  .project-block__main
+                    span.project-block__name.mb-1 Хай-тек
+                    span.project-block__price.mb-1 От 2 854 439 ₽
+                  .project-block__specifications
+                    span.project-block__specifications-item 85 м²
+                    span.project-block__specifications-item 6x10
+            .swiper-slide.projects-slider__slide
+              a(href="#").project-block
+                .project-block__image-wrap
+                  img(src="./images/zelburg.png", alt="", srcset="").project-block__image
+                .project-block__wrap
+                  .project-block__main
+                    span.project-block__name.mb-1 Хай-тек
+                    span.project-block__price.mb-1 От 2 854 439 ₽
+                  .project-block__specifications
+                    span.project-block__specifications-item 85 м²
+                    span.project-block__specifications-item 6x10
+            .swiper-slide.projects-slider__slide
+              a(href="#").project-block
+                .project-block__image-wrap
+                  img(src="./images/hiTek.png", alt="", srcset="").project-block__image
+                .project-block__wrap
+                  .project-block__main
+                    span.project-block__name.mb-1 Хай-тек
+                    span.project-block__price.mb-1 От 2 854 439 ₽
+                  .project-block__specifications
+                    span.project-block__specifications-item 85 м²
+                    span.project-block__specifications-item 6x10
+  
+
+  section.wrap.promt
+    .promt__section
+      h3.promt__title Как уменьшить цену?
+      p.promt__text Мы подкажем как снизить цену, не снижая при этом качество дома.
+      a(href="#").promt__link Инструкция по снижению
+        img(src="./images/Arrow_promt.png", alt="", srcset="").ml-1
+
+    .promt__section
+      h3.promt__title Есть вопрос?
+      p.promt__text Ответ на него найдётся на нашем сайте или у менеджера в чате.
+      a(href="#").promt__link Раздел «Вопрос-ответ»
+        img(src="./images/Arrow_promt.png", alt="", srcset="").ml-1
+
+    .promt__section.promt__section_with-img
+      h3.promt__title Не подходят типовые проекты?
+      p.promt__text Выделим архитектора, с которым Вы сделаете проект своей мечты.
+      a(href="#").promt__link Оставить заявку
+        img(src="./images/Arrow_promt.png", alt="", srcset="").ml-1
+
+  include development-steps.pug
+  include advantages-block.pug
+  include completed-orders.pug
+  include footer-block.pug

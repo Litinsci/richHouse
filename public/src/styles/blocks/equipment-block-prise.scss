@@ -1,0 +1,18 @@
+.equipment-block-prise {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 36px 0;
+
+    &__title {
+        font-size: 18px;
+        line-height: 22px;
+        color: #1B201E;
+    }
+
+    &__cost {
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 125%;
+        color: #FF6241;
+    }
+}

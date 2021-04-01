@@ -1,0 +1,42 @@
+extends layout
+block head
+    link(rel="stylesheet", href="/assets/styleAdmin.css")
+block content
+    .card.text-center
+        .card-header
+            ul.nav.nav-pills.card-header-pills
+                li.nav-item
+                    a.nav-link.news-CRUD-button(href='/adminPage') Новости
+                li.nav-item
+                    a.nav-link.shares-CRUD-button.active(href='/sharesCRUD') Акции
+        .card-body.mx-auto.w-100
+            .card-body-news-CRUD
+                a(href="/sharesCRUD/addShares").btn.btn-success.float-left.mb-3 Добавить
+                table.table
+                    thead
+                        tr
+                        th(scope='col') id
+                        th(scope='col') Дата
+                        th(scope='col') Загаловок 
+                        th(scope='col') Изображение
+                        th(scope='col') Действия
+                    tbody
+                        each val in baseShares
+                            tr.card-body-shares-CRUD__row
+                                    th #{val.id}
+                                    td #{val.date.toLocaleDateString()}
+                                    td.w-50 #{val.title}
+                                    td 
+                                        img(src=val.img_src alt="картинка").img-thumbnail
+                                    td.w-25
+                                        form.button-form
+                                            //- button.btn.btn-danger.mr-1.mb-1.delete-entity-button(type='button' name="deleteEntity" data-url-entity='/sharesCRUD/deleteShares' data-id-entity=val.id) Удалить
+                                            button.btn.btn-danger.mr-1.mb-1.delete-entity-button(type='button' name="deleteEntity" data-url-entity='/sharesCRUD/deleteShares'  ) Удалить
+                                            button.btn.btn-warning(type='button' name="updateEntity" data-url-entity='/sharesCRUD/updateShares' data-is-shares='true' data-id-entity=val.id) Редактировать
+
+       
+
+block footer
+    script(src="/assets/vendor.js")
+    script(src="/assets/admin.js")
+    

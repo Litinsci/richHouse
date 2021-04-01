@@ -1,0 +1,54 @@
+.building-category {
+    padding: 24px 0 0 32px;
+    height: 380px;
+    position: relative;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #1b201e;
+    display: block;
+
+
+    @include _767 {
+        padding: 16px;
+        height: 230px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 28px;
+        color: #1b201e;
+        display: block;
+
+        @include _767 {
+            font-size: 18px;
+        }
+    }
+
+    &__count {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 1.4px;
+
+        @include _767 {
+            font-size: 12px;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        max-height: 90%;
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 0 0 12px 12px;
+
+
+        @include _767{
+            max-height: 70%;
+        }
+    }
+}

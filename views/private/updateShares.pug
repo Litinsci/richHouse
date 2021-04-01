@@ -1,0 +1,34 @@
+extends layout
+block head
+    link(rel="stylesheet", href="/assets/styleAdmin.css")
+block content
+    .card.text-center
+        .card-header
+            ul.nav.nav-pills.card-header-pills
+                li.nav-item
+                    a.nav-link.news-CRUD-button.active(href='/adminPage') Новости
+                li.nav-item
+                    a.nav-link.shares-CRUD-button(href='/sharesCRUD') Акции
+        .card-body.mx-auto.w-100
+            form.card-body-CRUD
+                .mb-3
+                    label.form-label(for='dateNews') Дата акции 
+                    - var date = dateFns.format(new Date(parsRow.date),'yyyy-MM-dd');
+                    input#dateNews.form-control(type='date' value= `${date}` name="date")
+                .mb-3
+                    label.form-label(for='titleNews') Текст акции
+                    textarea#exampleFormControlTextarea1.form-control(rows='3' name="text") !{parsRow.title}
+                .mb-3
+                    .custom-file
+                        input#fileShares.custom-file-input.upladed(type='file' name="file")
+                        label.custom-file-label(for='fileShares') Изображение для акции
+                a(href="/adminPage").btn.btn-primary.card-body-news-CRUD__button-back.mr-3.float-left(type='submit') ← назад 
+                button.btn.btn-primary.float-left(type='submit' name="formBtn" data-type='update'  data-is-shares='true' data-url="/sharesCRUD/updateShares" data-id=parsRow.id) Отправить
+                        
+
+       
+
+block footer
+    script(src="/assets/vendor.js")
+    script(src="/assets/admin.js")
+    

@@ -1,0 +1,9 @@
+.tabs{
+
+    &__content{
+        display: none;
+         &_active{
+             display: flex;
+         }
+    }
+}

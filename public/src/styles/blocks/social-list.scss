@@ -1,0 +1,14 @@
+.social-list {
+    display: flex;
+
+    &__item {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #cecece;
+        border-radius: 50%;
+        color: #000;
+    }
+}

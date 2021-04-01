@@ -1,0 +1,41 @@
+.submenu {
+    display: flex;
+    justify-content: space-between;
+
+    &__mark-link {
+        background: #12a960;
+        padding: 32px;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 12px;
+        min-width: 270px;
+    }
+
+    &__mark-link-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 24px;
+        display: block;
+        max-width: 160px;
+    }
+    &__mark-arrow-btn{
+        width: 30px;
+        height: 10px;
+    }
+    &__services{
+        width: 73%;
+    }
+    &__droped-menu{
+        width: 100%;
+        background: #fff;
+        padding: 48px 0;
+        position: relative;
+        z-index: 10000;
+        opacity: 1;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

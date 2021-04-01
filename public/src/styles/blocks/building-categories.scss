@@ -1,0 +1,42 @@
+.building-categories {
+
+
+    &__blocks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: -24px;
+
+        @include _767 {
+            display: none;
+        }
+    }
+
+
+    &__block {
+        width: calc(50% - 12px);
+        margin-bottom: 24px;
+
+        &_fullwidth {
+            width: 100%;
+        }
+    }
+
+    &__slider-container {
+        margin-bottom: 32px;
+        overflow: visible;
+    }
+
+    &__slider {
+        overflow: hidden;
+        @include _767_ {
+            display: none;
+        }
+    }
+
+    &__slide>a {
+        // width: 90%;
+        width: 304px;
+    }
+}

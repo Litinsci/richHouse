@@ -1,0 +1,60 @@
+.what-are-we-building {
+    margin: 0 0 150px 0;
+
+    &__header {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 125%;
+        letter-spacing: -0.0165em;
+        color: #1B201E;
+
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+
+        @include _1200{
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        width: 100%;
+        border: 1px solid #E5E5E5;
+        box-sizing: border-box;
+        border-radius: 12px;
+        display: flex;
+        padding: 24px 0 26px 25px;
+        @include _1200{
+            margin: 0 24px 16px 0;
+        }
+        
+    }
+
+    &__column:not(:last-child){
+        margin-right: 24px;
+    }
+
+    &__img{
+        width: 56px;
+        height: 56px;
+        margin: 0 31px 0 0;
+    }
+    &__column-title {
+        font-weight: 450;
+        font-size: 28px;
+        line-height: 34px;
+        color: #333333;
+        padding:  0 0 8px 0;
+    }
+
+    &__column-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333333;
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,28 @@
+.construction-progress {
+    padding: 0 0 124px 0;
+
+    &__header {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 125%;
+        letter-spacing: -0.0165em;
+        color: #1B201E;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 450;
+        font-size: 28px;
+        line-height: 125%;
+        letter-spacing: -0.0165em;
+        color: #1B201E;
+    }
+    &__img{
+        width: 100%;
+    }
+}

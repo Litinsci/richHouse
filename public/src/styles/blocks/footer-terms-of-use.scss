@@ -1,0 +1,25 @@
+.footer-terms-of-use {
+    padding-bottom: 108px;
+    display: flex;
+    justify-content: space-between;
+    @include _767{
+        flex-direction: column;
+    }
+    &__info {
+        max-width: 1160px;
+        font-size: 14px;
+        line-height: 17px;
+        color: #1B201E;
+    }
+
+    &__linck{
+        font-size: 14px;
+        line-height: 17px;
+        color: #1B201E;
+    }
+    &__creator-by{
+        max-width: 165px;
+        height: 24px;
+        display: flex;
+    }
+}

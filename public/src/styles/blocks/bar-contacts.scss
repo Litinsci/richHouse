@@ -1,0 +1,37 @@
+.bar-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+
+    &__name {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        color: #1B201E;
+        margin-bottom: 12px;
+    }
+
+
+    &__info {
+        font-size: 22px;
+        line-height: 26px;
+        width: 191px;
+        color: #1B201E;
+    }
+
+
+    &__list {
+        list-style: none;
+        display: flex;
+    }
+
+    &__social-networks {
+        @include _767 {
+            order: -1;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+    }
+}

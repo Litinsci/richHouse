@@ -1,0 +1,31 @@
+.noUi-connects {
+    background: #FF6241;
+}
+.noUi-connect{
+    background: #EDF4F4 !important;
+}
+.noUi-horizontal .noUi-handle {
+    width: 16px !important ; 
+    height: 16px !important ; 
+    right: -17px !important ;
+    outline: none !important;
+    // top: px;
+    border: none;
+    border-radius: 50%;
+    background: #FF6241;
+
+    .noUi-handle {
+        cursor: default;
+        width: 16px;
+        height: 16px;
+    }
+}
+.noUi-handle::before, .noUi-handle::after{
+    content: none !important;
+}
+#r-slider__prise,
+#r-slider__area {
+    height: 4px;
+    border: none;
+    bottom: -7px;
+}
